@@ -1,0 +1,12 @@
+plugins {
+    id 'net.minecraftforge.gradle' version '[6.0.36,6.2)'
+    id 'java'
+}
+group = 'com.theuninvited'
+version = '0.1.0'
+base { archivesName = 'the_uninvited' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+minecraft { mappings channel: 'official', version: '1.21.11' }
+repositories { maven { url = 'https://maven.minecraftforge.net' } }
+dependencies { minecraft 'net.minecraftforge:forge:1.21.11-61.2.5' }
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
